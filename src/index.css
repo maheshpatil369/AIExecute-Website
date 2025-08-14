@@ -1,0 +1,89 @@
+/* index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  color: white;
+  background: none !important; /* Remove any solid color background */
+  overflow-x: hidden;
+}
+
+/* Background Video Styles */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
+  background-color: black;
+}
+
+
+/* OLD UI BACKGROUND (commented) */
+/*
+.homepage-background {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.homepage-background::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: rgba(0, 133, 255, 0.2);
+  clip-path: inset(0 50% 0 0);
+  filter: blur(60px);
+}
+
+.homepage-background::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(50%, -50%);
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: rgba(0, 133, 255, 0.2);
+  clip-path: inset(0 0 0 50%);
+  filter: blur(60px);
+}
+*/
+
+/* Rainbow Text Animation */
+.rainbow-text {
+  background: linear-gradient(
+    to right,
+    #6EE7B7,
+    #7C3AED,
+    #EC4899,
+    #F59E0B
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 200% auto;
+  transition: background-position 0.5s ease-in-out;
+}
+
+.rainbow-text:hover {
+  background-position: right center;
+}
